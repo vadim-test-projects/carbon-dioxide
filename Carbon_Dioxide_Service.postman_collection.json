@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "d426815b-31b0-4806-8f95-901d1890d144",
+		"name": "Carbon Dioxide Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Measurement",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"co2\": 1800,\n    \"time\": \"2021-10-09T16:02:40\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/sensors/1/measurements",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"sensors",
+						"1",
+						"measurements"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post Measurement",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"co2\": 1800,\n    \"time\": \"2021-10-07T16:02:40\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/sensors/3/measurements",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sensors",
+								"3",
+								"measurements"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Location",
+							"value": "http://localhost:8080/api/v1/sensors/3/measurements/10000001"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 11:25:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"co2\": 1800,\n    \"time\": \"2021-10-07T16:02:40.000+00:00\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/api/v1"
+		}
+	]
+}
