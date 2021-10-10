@@ -1,0 +1,45 @@
+DELETE FROM SENSOR;
+DELETE FROM ALERT;
+DELETE FROM MEASUREMENT;
+
+INSERT INTO SENSOR (ID, CURRENT_STATUS)
+    VALUES(1, 'OK');
+
+INSERT INTO SENSOR (ID, CURRENT_STATUS)
+    VALUES(2, 'WARN');
+
+INSERT INTO SENSOR (ID, CURRENT_STATUS)
+    VALUES(3, 'ALERT');
+
+INSERT INTO ALERT (ID, START_TIME, END_TIME, SENSOR_ID)
+    VALUES(4, parsedatetime('17-09-2012 18:47:52', 'dd-MM-yyyy hh:mm:ss'), parsedatetime('18-09-2012 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 1);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(5, 1800, parsedatetime('01-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 1);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(6, 1900, parsedatetime('02-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 1);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(7, 1850, parsedatetime('03-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 1);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(8, 2100, parsedatetime('01-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 2);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(9, 2150, parsedatetime('04-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 3);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(10, 2200, parsedatetime('05-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 3);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(11, 2150, parsedatetime('06-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 3);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(12, 1800, parsedatetime('01-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 3);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(13, 1900, parsedatetime('02-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 3);
+
+INSERT INTO MEASUREMENT (ID, CO2, TIME, SENSOR_ID)
+    VALUES(14, 1950, parsedatetime('03-10-2021 18:47:52', 'dd-MM-yyyy hh:mm:ss'), 3);
